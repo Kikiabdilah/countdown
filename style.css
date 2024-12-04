@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box  ;
+}
+
+:root{
+--White: #ffffff;
+--white-blue: hsl(237, 18%, 59%);
+--blue: hsl(236, 21%, 26%);
+--dark-blue: hsl(235, 16%, 14%);
+--black-blue: hsl(234, 17%, 12%);
+--red: hsl(345, 95%, 68%);
+
+}
+img{
+    max-width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+.stars{
+    position: absolute;
+}
+
+.hills{
+    position: absolute;
+    bottom: 0;
+}
+
+body{
+    font-family: "Red Hat Text", sans-serif;
+    background-color: var(--dark-blue);
+}
+
+/* container */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 63vh;
+}
+
+.container h1{
+    color: #ffffff;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 44px;
+}
+
+/* countdown */
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.countdown div{
+    margin: 10px;
+}
+
+.countdown p{
+    background-color: var(--blue);
+    color: var(--red);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 36px;
+}
+
+.countdown h3{
+    color: var(--white-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#message{
+    background-color: var(--blue);
+    color: burlywood;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 36px;
+    opacity: 0;
+    transform: scale(0.9); 
+    transition: opacity 0.5s ease, transform 0.5s ease-out;
+}
+
+#message.show{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* socials */
+.socials{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    z-index: 999;
+    transform: translateX(-50%);
+}
+
+.socials ul{
+    display: flex;
+}
+
+.socials ul li{
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media(max-width:520px){
+    .container{
+        max-width: auto;
+    }
+}
+@media (min-width : 1440px){
+    .stars img,
+    .hills img {
+        width: 1600px;
+    }
+}
+@media (min-width : 1600px){
+    .stars img,
+    .hills img {
+        width: 1920px;
+    }
+
+
+}
